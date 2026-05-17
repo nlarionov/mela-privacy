@@ -80,7 +80,7 @@ If we change this policy, we publish the new version at this same URL and update
 
 ### Contact
 
-Questions about this policy: CONTACT_EMAIL_PLACEHOLDER.
+Questions about this policy: dace_phoenix_2p@icloud.com.
 
 ---
 
@@ -152,4 +152,4 @@ Mela не предназначено для детей младше 13 лет и
 
 ### Контакт
 
-Вопросы по политике: CONTACT_EMAIL_PLACEHOLDER.
+Вопросы по политике: dace_phoenix_2p@icloud.com.
