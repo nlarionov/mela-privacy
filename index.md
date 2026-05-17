@@ -6,7 +6,7 @@ layout: default
 # Privacy Policy — Mela
 
 Effective date: EFFECTIVE_DATE_PLACEHOLDER.
-Last updated: LAST_UPDATED_PLACEHOLDER.
+Last updated: 2026-05-17.
 
 This page is the privacy policy for Mela, an iPhone app that helps you track your menstrual cycle. Both English and Russian versions are below.
 
