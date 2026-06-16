@@ -32,7 +32,7 @@ Inside the app's private storage on your iPhone:
 - Optional documents you import (such as lab PDFs), if you use the documents feature.
 - Local backup files, if you use the export/import feature.
 
-All of this data is stored on-device with iOS Data Protection (the `NSFileProtectionCompleteUnlessOpen` class): the files are encrypted on disk, protected while your iPhone is locked, and are not accessible to other apps.
+All of this data is stored on-device in the app's own container, encrypted with iOS Data Protection. Your logged data, backups, and imported files use the `NSFileProtectionCompleteUnlessOpen` class (encrypted on disk, protected while your iPhone is locked). Exported PDF reports use the stronger `NSFileProtectionComplete`. A small summary the app prepares for its home-screen widget uses `NSFileProtectionCompleteUntilFirstUserAuthentication` so the widget can render (see Home-screen widget below). None of this is accessible to other developers' apps.
 
 ### What we do not do
 
@@ -54,10 +54,18 @@ If you back up your iPhone to iCloud through iOS settings, the app's local data 
 
 If a future version of the app integrates with Apple Health, you will be asked for explicit permission per data category. Any data we read from Apple Health stays on the device. We do not transmit it.
 
+### Home-screen widget
+
+Mela includes an optional home-screen widget. To draw it, the app saves a small snapshot of your cycle summary (such as your current phase and predicted dates) into a private storage area shared between the app and its own widget (an App Group on your device). This snapshot stays on your device, is not sent anywhere, and is removed when you delete your data. Because a widget can appear on the Lock Screen, this snapshot is readable after the first unlock following a restart.
+
+### Purchases
+
+Mela offers an optional paid upgrade. Purchases and subscriptions are processed by Apple through the App Store using StoreKit. Apple handles your payment; Mela does not receive or store your card number or payment details. Your purchase status is kept on your device.
+
 ### Permissions the app may request
 
 - Notifications: to remind you about an upcoming period, ovulation window, or scheduled check-in. You can disable this at any time in iOS Settings.
-- Photo library: only if you choose to set a profile avatar. We access only the image you select.
+- Photos: only if you choose to set a profile avatar. Mela uses the system photo picker, so the app is never granted access to your photo library - it receives only the single image you pick.
 
 The app does not request location, contacts, microphone, camera, or HealthKit unless a future feature explicitly asks you.
 
@@ -104,7 +112,7 @@ Mela — офлайн-приложение для iPhone. Оно не собир
 - Документы, которые ты импортируешь (например, лабораторные PDF), если используешь эту функцию.
 - Локальные резервные файлы, если ты используешь экспорт/импорт.
 
-Все данные хранятся на устройстве с защитой iOS Data Protection (класс `NSFileProtectionCompleteUnlessOpen`): файлы зашифрованы на диске, защищены, пока iPhone заблокирован, и недоступны другим приложениям.
+Все данные хранятся на устройстве в собственном контейнере приложения и зашифрованы средствами iOS Data Protection. Твои записи, резервные копии и импортированные файлы используют класс `NSFileProtectionCompleteUnlessOpen` (зашифрованы на диске, защищены, пока iPhone заблокирован). Экспортируемые PDF-отчёты используют более строгий `NSFileProtectionComplete`. Небольшой сводный снапшот для виджета на домашнем экране использует `NSFileProtectionCompleteUntilFirstUserAuthentication`, чтобы виджет мог отрисовываться (см. «Виджет на домашнем экране» ниже). Ничто из этого недоступно приложениям других разработчиков.
 
 ### Чего мы не делаем
 
@@ -126,10 +134,18 @@ Mela — офлайн-приложение для iPhone. Оно не собир
 
 Если будущая версия интегрируется с Apple Health, мы попросим у тебя явное разрешение на каждый тип данных отдельно. Данные, которые мы читаем из Apple Health, остаются на устройстве. Мы их не передаём.
 
+### Виджет на домашнем экране
+
+В Mela есть необязательный виджет для домашнего экрана. Чтобы его отрисовать, приложение сохраняет небольшой снапшот сводки цикла (например, текущую фазу и прогнозные даты) в приватную область, общую для приложения и его собственного виджета (App Group на твоём устройстве). Этот снапшот остаётся на устройстве, никуда не отправляется и удаляется вместе с твоими данными. Поскольку виджет может появляться на экране блокировки, снапшот читаем после первого разблокирования после перезагрузки.
+
+### Покупки
+
+В Mela есть необязательное платное улучшение. Покупки и подписки обрабатывает Apple через App Store (StoreKit). Платёж обрабатывает Apple; Mela не получает и не хранит номер карты или платёжные данные. Статус покупки хранится на твоём устройстве.
+
 ### Разрешения, которые приложение может запросить
 
 - Уведомления: чтобы напомнить о приближающихся месячных, окне овуляции или плановом check-in. Можно выключить в настройках iOS в любой момент.
-- Доступ к фото: только если ты захочешь поставить аватар. Мы получаем только тот снимок, который ты выберешь.
+- Фото: только если ты захочешь поставить аватар. Mela использует системный выбор фото, поэтому приложение не получает доступ к твоей фотобиблиотеке - ему передаётся только тот один снимок, который ты выберешь.
 
 Приложение не запрашивает геолокацию, контакты, микрофон, камеру или HealthKit, пока какая-то будущая функция явно тебя об этом не попросит.
 
