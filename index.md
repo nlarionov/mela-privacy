@@ -6,7 +6,7 @@ layout: default
 # Privacy Policy — Mela
 
 Effective date: 2026-05-20.
-Last updated: 2026-05-17.
+Last updated: 2026-06-16.
 
 This page is the privacy policy for Mela, an iPhone app that helps you track your menstrual cycle. Both English and Russian versions are below.
 
@@ -32,7 +32,7 @@ Inside the app's private storage on your iPhone:
 - Optional documents you import (such as lab PDFs), if you use the documents feature.
 - Local backup files, if you use the export/import feature.
 
-All of this data is stored with iOS file protection (`NSFileProtectionComplete`). When your iPhone is locked, the files cannot be read by other apps or by the iOS system.
+All of this data is stored on-device with iOS Data Protection (the `NSFileProtectionCompleteUnlessOpen` class): the files are encrypted on disk, protected while your iPhone is locked, and are not accessible to other apps.
 
 ### What we do not do
 
@@ -104,7 +104,7 @@ Mela — офлайн-приложение для iPhone. Оно не собир
 - Документы, которые ты импортируешь (например, лабораторные PDF), если используешь эту функцию.
 - Локальные резервные файлы, если ты используешь экспорт/импорт.
 
-Все данные хранятся с защитой файлов iOS (`NSFileProtectionComplete`). Когда iPhone заблокирован, файлы недоступны другим приложениям и самой iOS.
+Все данные хранятся на устройстве с защитой iOS Data Protection (класс `NSFileProtectionCompleteUnlessOpen`): файлы зашифрованы на диске, защищены, пока iPhone заблокирован, и недоступны другим приложениям.
 
 ### Чего мы не делаем
 
