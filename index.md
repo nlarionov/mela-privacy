@@ -52,7 +52,7 @@ If you back up your iPhone to iCloud through iOS settings, the app's local data 
 
 ### Apple Health
 
-If a future version of the app integrates with Apple Health, you will be asked for explicit permission per data category. Any data we read from Apple Health stays on the device. We do not transmit it.
+Mela offers an optional Apple Health connection (part of the paid upgrade, off by default). If you turn it on, Mela asks for read-only permission per data category and can read temperature, menstrual days, resting heart rate, respiratory rate, and sleep to refine your cycle estimates. Reading is one-way: Mela never writes anything back to Apple Health. Anything read stays on your device and is never transmitted. You can turn it off at any time, and you grant or deny each data category separately in the Health app.
 
 ### Home-screen widget
 
@@ -67,7 +67,7 @@ Mela offers an optional paid upgrade. Purchases and subscriptions are processed 
 - Notifications: to remind you about an upcoming period, ovulation window, or scheduled check-in. You can disable this at any time in iOS Settings.
 - Photos: only if you choose to set a profile avatar. Mela uses the system photo picker, so the app is never granted access to your photo library - it receives only the single image you pick.
 
-The app does not request location, contacts, microphone, camera, or HealthKit unless a future feature explicitly asks you.
+The app does not request location, contacts, microphone, or camera. It requests read-only Apple Health access only if you turn on the optional Apple Health connection.
 
 ### Your control
 
@@ -132,7 +132,7 @@ Mela — офлайн-приложение для iPhone. Оно не собир
 
 ### Apple Health
 
-Если будущая версия интегрируется с Apple Health, мы попросим у тебя явное разрешение на каждый тип данных отдельно. Данные, которые мы читаем из Apple Health, остаются на устройстве. Мы их не передаём.
+В Mela есть необязательное подключение к Apple Health (часть платного улучшения, по умолчанию выключено). Если ты его включишь, Mela запросит разрешение только на чтение по каждому типу данных отдельно и сможет читать температуру, дни менструации, пульс в покое, частоту дыхания и сон, чтобы точнее оценивать цикл. Чтение одностороннее: Mela ничего не записывает обратно в Apple Health. Всё прочитанное остаётся на устройстве и никуда не передаётся. Ты можешь выключить это в любой момент, а разрешение на каждый тип данных даёшь или отзываешь отдельно в приложении Здоровье.
 
 ### Виджет на домашнем экране
 
@@ -147,7 +147,7 @@ Mela — офлайн-приложение для iPhone. Оно не собир
 - Уведомления: чтобы напомнить о приближающихся месячных, окне овуляции или плановом check-in. Можно выключить в настройках iOS в любой момент.
 - Фото: только если ты захочешь поставить аватар. Mela использует системный выбор фото, поэтому приложение не получает доступ к твоей фотобиблиотеке - ему передаётся только тот один снимок, который ты выберешь.
 
-Приложение не запрашивает геолокацию, контакты, микрофон, камеру или HealthKit, пока какая-то будущая функция явно тебя об этом не попросит.
+Приложение не запрашивает геолокацию, контакты, микрофон или камеру. Доступ к Apple Health (только на чтение) запрашивается, лишь если ты включишь необязательное подключение к Apple Health.
 
 ### Контроль данных
 
