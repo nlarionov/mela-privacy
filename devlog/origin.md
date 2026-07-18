@@ -56,10 +56,6 @@ The app quietly went live in late June 2026, with a second version in July. It i
 
 If you have ever dreamed of building your own app: do not wait. If you have an idea, you can absolutely pull it off. From the first spark to a live App Store page can take way less time than you think, and the tools and knowledge available today are more than enough.
 
-I write the whole journey up in detail on my devlog: the architecture and what it costs, the PDF importer story, the App Store review gauntlet, and the real numbers as they come: https://nlarionov.github.io/mela-privacy/devlog/
-
-The app itself, if you are curious: https://apps.apple.com/app/mela-private-cycle-tracker/id6777094477
-
 Good luck out there, I hope you get to ship the app of your dreams. Have a great day, and wishing you all fewer bugs and zero memory leaks :)
 
 ---
