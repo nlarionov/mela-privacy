@@ -1,17 +1,18 @@
-title: Mela Privacy Policy
-description: Privacy policy for Mela, an offline iPhone cycle tracker.
+title: Mela
+description: A private, offline cycle tracker for iPhone. Privacy policy and build-in-public devlog.
 theme: jekyll-theme-minimal
+# Project site served from /mela-privacy/. If a custom domain is ever pointed at this
+# repo, clear baseurl (set it to an empty string) or every internal link breaks.
+baseurl: /mela-privacy
 plugins:
   - jekyll-relative-links
 relative_links:
   enabled: true
   collections: true
-include:
-  - CONTRIBUTING.md
+# The repo README is a setup guide with placeholders, it is not site content.
+# Anything not listed here and not a page with front matter stays unpublished.
+exclude:
   - README.md
   - LICENSE.md
-  - COPYING.md
   - CODE_OF_CONDUCT.md
   - CONTRIBUTING.md
-  - ISSUE_TEMPLATE.md
-  - PULL_REQUEST_TEMPLATE.md
