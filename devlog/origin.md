@@ -26,7 +26,7 @@ That is when it clicked: why not try to build this myself? I looked at the app a
 
 I started digging into the category and looking at the current players. And I kept interrogating my girlfriend, probably driving her a little crazy with my silly questions. What is missing? What is critical? What would actually make you switch?
 
-Two things came up over and over. She badly missed proper infographics and statistics, some way to actually see her own patterns instead of just a calendar. And she worried about where all that logged data goes and who might use it.
+Three things came up over and over. She badly missed proper infographics and statistics, some way to actually see her own patterns instead of just a calendar. She was tired of being locked in, with no way to take her own data anywhere. And she worried about where all that logged data goes and who might use it.
 
 ## The privacy rabbit hole
 
@@ -34,7 +34,7 @@ That worry surprised me at first, so I started reading. What I found did not mak
 
 So privacy became the core of the whole project. I made a single decision and let everything else follow from it: her data should live only on the phone. No server, no account, no analytics, no ads. If there is no server, there is nothing to leak and nothing to sell.
 
-And that five-years-of-history lock-in? It turned into the first genuinely hard technical problem of the project: I built an importer that recovers her entire history from the old app's PDF export, fully on device.
+And the lock-in? I refused to inherit it. In my app everything you log exports to a plain JSON file and imports right back, so your data is never a hostage. Getting her history out of the old app was harder, and it turned into the first genuinely hard technical problem of the project: an importer that reads the old app's PDF export and recovers her entire history from it, fully on device.
 
 ## Building by listening
 
