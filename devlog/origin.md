@@ -20,13 +20,11 @@ I asked her why she still used the thing. Her answer was worse than the ads. She
 
 I watched this and something turned over in me. Here was an app that held some of the most intimate data a person has, treating her attention like inventory to be sold and her history like a hostage. To write one number about her own body, she had to pay in ads. It felt wrong in a way I could not shrug off.
 
-I started reading about the category after that. What I found did not make me feel better. The most popular cycle app in the world settled with the US Federal Trade Commission in 2021 over allegations that it shared intimate health data with third parties after publicly promising it would not ([FTC press release, January 2021](https://www.ftc.gov/news-events/news/press-releases/2021/01/developer-popular-womens-fertility-tracking-app-settles-ftc-allegations-it-misled-consumers-about)). The company neither admitted nor denied the allegations, which is how these consent orders normally end. Popular and trustworthy, it turns out, are not the same word. That is the part that stayed with me. People trust these apps with more than they trust most humans, and the trust is not always earned.
-
 Somewhere on that trip the idea clicked: why not build this myself? The app in front of me did not look impossibly complex. I had some basic Xcode and SwiftUI knowledge, a long-running habit of hanging around design resources, and now a user one seat away. It looked like a mountain I could actually climb.
 
 ## The one decision everything hangs on
 
-There was one more thing she told me: she worried about where all that logged data goes and who might use it. The category's record says she was right to.
+There was one more thing she told me: she worried about where all that logged data goes and who might use it. That surprised me at first, so I started reading about the category. What I found did not make me feel better. The most popular cycle app in the world settled with the US Federal Trade Commission in 2021 over allegations that it shared intimate health data with third parties after publicly promising it would not ([FTC press release, January 2021](https://www.ftc.gov/news-events/news/press-releases/2021/01/developer-popular-womens-fertility-tracking-app-settles-ftc-allegations-it-misled-consumers-about)). The company neither admitted nor denied the allegations, which is how these consent orders normally end. Popular and trustworthy, it turns out, are not the same word. People trust these apps with more than they trust most humans, and the trust is not always earned. She was right to worry.
 
 So I made a single decision and let everything else follow from it: the data should live only on the phone. Not in my cloud, because I would not have a cloud. Not behind an account, because there would be no account. Not in a third-party analytics kit, because there would be none.
 
