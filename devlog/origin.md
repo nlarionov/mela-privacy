@@ -8,55 +8,59 @@ canonical_url: https://nlarionov.github.io/mela-privacy/devlog/origin/
 ---
 # The app I never expected to build
 
-I always wanted to build an app. For years I assumed it would be a tool, or a game, or some clever little utility. I never expected my first one to be a cycle tracker. I am not the user. I did not have the problem. The problem sat across from me on a Valentine's trip.
+I always wanted to build an app. For years I assumed it would be a tool, or a game, or some clever little utility. I never expected my first one to be a cycle tracker. I am not the user. I did not have the problem. The problem sat across from me on a Valentine's trip. Honestly, I still do not fully believe I pulled it off. Here is how the idea found me and what the road actually looked like.
 
 ![Mela's home screen: a calm cycle overview with the current day, phase, and next predicted period, no ads and no feed]({{ site.baseurl }}/devlog/images/screenshots/home.png)
 
-## The moment
+## How it started
 
-This February, my girlfriend and I went away for a few days around Valentine's day. At some point she opened her period app to log one detail about her body, the kind of thing you tap in and forget. Before she could do it, a full-screen ad loaded, the kind where you wait thirty seconds for the close button to appear. She sat and waited for it. Then another interruption, then finally the log.
+This February my girlfriend and I went away for a few days around Valentine's day. At some point I watched her open her period tracker, and once again the app hit her with ads first. The kind where you wait 30 seconds for the X to appear, close the ad, and only then get to log your period.
 
-I asked her why she still used the thing. Her answer was worse than the ads. She could not easily leave: five years of history in that app, and no export, no import, no migration path to anywhere. The monetization model had recently changed, so the ads were getting worse, and paying her way out made no sense either, because everything she needed was the basic functionality she already had. The subscription offered nothing she wanted. She was locked in, and her attention was the rent.
+I asked her: why do you still use this thing? I personally hate ads in apps. If an app is valuable to me, I try to pay for it, or I look for an open source alternative.
 
-I watched this and something turned over in me. Here was an app that held some of the most intimate data a person has, treating her attention like inventory to be sold and her history like a hostage. To write one number about her own body, she had to pay in ads. It felt wrong in a way I could not shrug off.
+Her answer stuck with me. She could not easily leave. Five years of history in that app, and no export, no import, no migration path to anywhere. Meanwhile the app had recently changed its monetization model and the ads got completely out of hand. Paying did not make sense to her either: everything she needed was the basic functionality she already had, and the Pro subscription added nothing she actually wanted. Why should she suddenly pay just to keep logging the same things she had been logging for five years?
 
-Somewhere on that trip the idea clicked: why not build this myself? The app in front of me did not look impossibly complex. I had some basic Xcode and SwiftUI knowledge, a long-running habit of hanging around design resources, and now a user one seat away. It looked like a mountain I could actually climb.
+## The idea
 
-## The one decision everything hangs on
+That is when it clicked: why not try to build this myself? I looked at the app and it did not seem impossibly complex. I had some basic Xcode and SwiftUI knowledge, and in my free time I had always enjoyed hanging around design resources. So I figured: why not.
 
-There was one more thing she told me: she worried about where all that logged data goes and who might use it. That surprised me at first, so I started reading about the category. What I found did not make me feel better. The most popular cycle app in the world settled with the US Federal Trade Commission in 2021 over allegations that it shared intimate health data with third parties after publicly promising it would not ([FTC press release, January 2021](https://www.ftc.gov/news-events/news/press-releases/2021/01/developer-popular-womens-fertility-tracking-app-settles-ftc-allegations-it-misled-consumers-about)). The company neither admitted nor denied the allegations, which is how these consent orders normally end. Popular and trustworthy, it turns out, are not the same word. People trust these apps with more than they trust most humans, and the trust is not always earned. She was right to worry.
+I started digging into the category and looking at the current players. And I kept interrogating my girlfriend, probably driving her a little crazy with my silly questions. What is missing? What is critical? What would actually make you switch?
 
-So I made a single decision and let everything else follow from it: the data should live only on the phone. Not in my cloud, because I would not have a cloud. Not behind an account, because there would be no account. Not in a third-party analytics kit, because there would be none.
+Two things came up over and over. She badly missed proper infographics and statistics, some way to actually see her own patterns instead of just a calendar. And she worried about where all that logged data goes and who might use it.
 
-If there is no server, there is nothing to leak, nothing to subpoena, nothing to sell, and nothing for me to be tempted by later when someone offers money for a data set I promised I would never build. Privacy by policy is a promise you make. Privacy by architecture is a promise you make impossible to break. I wanted the second kind.
+## The privacy rabbit hole
 
-That one choice turned out to decide almost everything downstream, and it cost me real things I will write about honestly in later posts. No crash reports. No usage analytics. No easy sync between devices. Support where I cannot look at the user's data even when they want me to. I took those costs on purpose. In this category I think they are the right ones.
+That worry surprised me at first, so I started reading. What I found did not make me feel better. The most popular cycle app in the world settled with the US Federal Trade Commission in 2021 over allegations that it shared intimate health data with third parties after publicly promising it would not ([FTC press release, January 2021](https://www.ftc.gov/news-events/news/press-releases/2021/01/developer-popular-womens-fertility-tracking-app-settles-ftc-allegations-it-misled-consumers-about)). The company neither admitted nor denied the allegations, which is how these consent orders normally end. Popular and trustworthy, it turns out, are not the same word. People trust these apps with more than they trust most humans, and the trust is not always earned. She was right to worry.
+
+So privacy became the core of the whole project. I made a single decision and let everything else follow from it: her data should live only on the phone. No server, no account, no analytics, no ads. If there is no server, there is nothing to leak and nothing to sell.
+
+And that five-years-of-history lock-in? It turned into the first genuinely hard technical problem of the project: I built an importer that recovers her entire history from the old app's PDF export, fully on device.
 
 ## Building by listening
 
-Here is the honest awkwardness of it. I am a man building an app about women's health. I do not have the body it is for. The only way I know to do that responsibly is to stop assuming and start listening.
+Here is the honest awkwardness of it: I am a man building an app about women's health. I do not have the body it is for. The only way I know to do that responsibly is to stop assuming and start asking. So the app was built by listening. First to my girlfriend, who is patient with my questions and blunt about what is wrong. Then to other women who track their cycles. A lot of what I thought was important turned out to be noise, and a lot of what I would have skipped turned out to be the whole point.
 
-So the app was built by listening. First to my girlfriend, who is patient with my questions and blunt about what is wrong. Then, as it grew, to other women who track their cycles and were willing to tell me what actually matters to them and what is noise. A lot of what I first thought was important turned out not to be. A lot of what I would have skipped turned out to be the whole point, like proper statistics and infographics, being able to look back over a year and see your own patterns clearly, which most apps bury or gate. That one came straight from her.
+## The road there
 
-That listening is not a marketing line. It is the development process. When I am unsure, the answer is never "what do I think," it is "go ask." I keep building it the same way.
+From that February idea to a live app took me about four months of evenings. There is no company behind it: one person writes the code, draws the icon, argues with App Review, and writes the App Store copy in two languages. Several TestFlight cycles with my girlfriend as the first and harshest tester. A lot of talking, a fair amount of misunderstanding, endless questions from my side, pointed questions from hers, and criticism that sometimes stung and always made the app better.
 
-## What "solo, first app" actually means
-
-There is no company here. No co-founder, no designer down the hall, no growth team. It is one person who writes the code, draws the icon, argues with App Review, writes the App Store copy in two languages, and then writes this. Every hat, one head.
-
-That is slower and it is lonelier than a team, and it also means nobody in a meeting can talk me into a dark pattern for a quarterly number. The values in the app are just my values, unfiltered, for better and worse. If Mela ever betrays its own premise, there is exactly one person to blame, and he is writing this sentence.
+And then App Review. I went through several rounds of rejections, fixed what was fair, pushed back where I disagreed, and eventually got through. Per aspera ad astra. The rejection-by-rejection story is a saga of its own.
 
 ![Mela's onboarding introduction: a warm, plain welcome screen that states the app's purpose without hype or cartoon styling]({{ site.baseurl }}/devlog/images/screenshots/onboarding-brand.png)
 
-Mela is live now. Late June 2026, a quiet release, no splash, with a second version in July. Downloads run to a handful a day, and on the last full day of data I have it was four. I am going to be honest about numbers like that all the way through, because an app built to refuse manipulation would be a strange place to start manipulating you. Small and honest beats big and hollow, at least for now.
+## It is live
 
-## What this series is
+The app quietly went live in late June 2026, with a second version in July. It is small, downloads are a handful a day, and I am strangely fine with that. Seeing real people use something you made is a feeling I can not quite describe. An app built to refuse manipulation would be a strange place to start manipulating people with a fake growth story, so the numbers I share will always be the real ones.
 
-This is a build-in-public devlog, from the first idea to the App Store and past it. I will write about the architecture and what it costs, a genuinely strange technical problem I had to solve to let people bring their history over, the App Store review gauntlet, how you charge for a privacy app without becoming the thing you built against, and the launch numbers as they actually are.
+## Why I am telling you this
 
-It is written for other developers, which is a funny thing to admit, because you are not who the app is for. The people Mela is for are not reading a devlog about content-stream interpreters. That is fine. This series is not how I find them. It is where I show my work.
+If you have ever dreamed of building your own app: do not wait. If you have an idea, you can absolutely pull it off. From the first spark to a live App Store page can take way less time than you think, and the tools and knowledge available today are more than enough.
 
-If you build things, the interesting question here is not "how do I get users." It is "what are you willing to give up to keep a promise." I gave up a lot. Next post, the exact bill.
+I write the whole journey up in detail on my devlog: the architecture and what it costs, the PDF importer story, the App Store review gauntlet, and the real numbers as they come: https://nlarionov.github.io/mela-privacy/devlog/
+
+The app itself, if you are curious: https://apps.apple.com/app/mela-private-cycle-tracker/id6777094477
+
+Good luck out there, I hope you get to ship the app of your dreams. Have a great day, and wishing you all fewer bugs and zero memory leaks :)
 
 ---
 
