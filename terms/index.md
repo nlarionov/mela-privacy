@@ -20,7 +20,7 @@ Mela is a personal wellness app that runs entirely on your iPhone. It is not a m
 
 ### Who we are
 
-Mela is published on the App Store by Nikita Larionov, an independent developer based in Belgrade, Serbia. Contact: znationfurioz@gmail.com.
+Mela is published on the App Store by Nikita Larionov, an independent developer based in Belgrade, Serbia. Contact: dace_phoenix_2p@icloud.com.
 
 ### Acceptance
 
@@ -105,7 +105,7 @@ We may update these terms as the app changes. The effective date at the top mark
 
 ### Contact
 
-znationfurioz@gmail.com
+dace_phoenix_2p@icloud.com
 
 ---
 
@@ -117,7 +117,7 @@ Mela это приложение для личного велнес-трекин
 
 ### Кто мы
 
-Mela публикуется в App Store независимым разработчиком Никитой Ларионовым, Белград, Сербия. Контакт: znationfurioz@gmail.com.
+Mela публикуется в App Store независимым разработчиком Никитой Ларионовым, Белград, Сербия. Контакт: dace_phoenix_2p@icloud.com.
 
 ### Согласие
 
@@ -202,4 +202,4 @@ Apple не является стороной этих условий и не о�
 
 ### Контакт
 
-znationfurioz@gmail.com
+dace_phoenix_2p@icloud.com
