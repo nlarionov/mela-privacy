@@ -5,6 +5,7 @@ layout: default
 
 # Mela Privacy Policy
 
+[Terms of Use]({{ site.baseurl }}/terms/) - the terms that govern using the app.
 [Devlog]({{ site.baseurl }}/devlog/) - how Mela was built, in public.
 
 Effective date: 2026-05-20.
