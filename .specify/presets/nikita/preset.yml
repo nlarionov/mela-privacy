@@ -1,0 +1,20 @@
+schema_version: "1.0"
+
+preset:
+  id: "nikita"
+  name: "Nikita Workflow"
+  version: "1.0.0"
+  description: "Lean specify + feature branch via git extension + status-block header per constitution"
+  author: "nikita"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.6.0"
+
+provides:
+  templates:
+    - type: "command"
+      name: "speckit.specify"
+      file: "commands/speckit.specify.md"
+      description: "Specify with branch NNN-slug (code features) + spec.md with status block"
+      replaces: "speckit.specify"
