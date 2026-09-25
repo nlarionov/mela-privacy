@@ -73,7 +73,7 @@ Mela offers an optional paid upgrade. Purchases and subscriptions are processed 
 
 ### Permissions the app may request
 
-- Notifications: to remind you about an upcoming period or ovulation window, a daily check-in, your pills, and a change in your cycle pattern. Mela also tells you, before it asks, that it will send one note a day, in the evening, about Mela Pro; if you agree, that note is on, and you can turn it off in Settings > Notifications > Pro offers. It never goes to subscribers. If you turn it on, also a reminder two days before a free trial ends. All notifications are scheduled on your device. You can disable them at any time in iOS Settings.
+- Notifications: to remind you about an upcoming period or ovulation window, a daily check-in, your pills, breathing, and a change in your cycle pattern. Separately, Mela asks whether it may send one note a day, in the evening, about Mela Pro. It stays off unless you say yes, and you can turn it off in Settings > Notifications > Pro offers. It never goes to subscribers. If you turn it on, also a reminder two days before a free trial ends. All notifications are scheduled on your device. You can disable them at any time in iOS Settings.
 - Camera: only when you photograph a document to attach it to an appointment entry. The photo stays on your device.
 - Photos: only if you choose to set a profile avatar. Mela uses the system photo picker, so the app is never granted access to your photo library - it receives only the single image you pick.
 
@@ -162,7 +162,7 @@ Mela это офлайн-приложение для iPhone. Оно не соб�
 
 ### Разрешения, которые приложение может запросить
 
-- Уведомления: чтобы напомнить о приближающейся менструации или окне овуляции, о ежедневном чек-ине, о таблетках и об изменении в цикле. Ещё Mela заранее говорит, что будет присылать одно сообщение в день, вечером, о Mela Pro. Если ты согласишься, это сообщение включится; выключить его можно в Настройках > Уведомления > Предложения Pro. Подписчикам оно не приходит. Если ты включишь напоминание о пробном периоде, оно придёт за два дня до его конца. Все уведомления планируются на устройстве. Можно выключить в настройках iOS в любой момент.
+- Уведомления: чтобы напомнить о приближающейся менструации или окне овуляции, о ежедневном чек-ине, о таблетках, о дыхании и об изменении в цикле. Отдельно Mela спрашивает, можно ли присылать одно сообщение в день, вечером, о Mela Pro. Без твоего «да» оно не приходит; выключить его можно в Настройках > Уведомления > Предложения Pro. Подписчикам оно не приходит. Если ты включишь напоминание о пробном периоде, оно придёт за два дня до его конца. Все уведомления планируются на устройстве. Можно выключить в настройках iOS в любой момент.
 - Камера: только когда ты фотографируешь документ, чтобы прикрепить его к записи о визите к врачу. Снимок остаётся на устройстве.
 - Фото: только если ты захочешь поставить аватар. Mela использует системный выбор фото, поэтому приложение не получает доступ к твоей фотобиблиотеке - ему передаётся только тот один снимок, который ты выберешь.
 
