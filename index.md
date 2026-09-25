@@ -30,6 +30,8 @@ Inside the app's private storage on your iPhone:
 
 - Cycle entries you log (period, pain, symptoms, tests, pills, sex, weight, notes).
 - Your app settings (preferences, reminder times, appearance choices) and the answers you give in the first-run setup.
+- The list of reminders the app has shown you (the bell on the Home screen).
+- Documents and photos you attach to an appointment entry, if you use that feature.
 - An optional profile name and avatar image, if you choose to set one.
 - Local backup files, if you use the export/import feature.
 
@@ -71,10 +73,11 @@ Mela offers an optional paid upgrade. Purchases and subscriptions are processed 
 
 ### Permissions the app may request
 
-- Notifications: to remind you about an upcoming period or ovulation window, a daily check-in, your pills, and a change in your cycle pattern. If you turn them on, also a reminder two days before a free trial ends and a note about Mela Pro. All notifications are scheduled on your device. You can disable them at any time in iOS Settings.
+- Notifications: to remind you about an upcoming period or ovulation window, a daily check-in, your pills, and a change in your cycle pattern. Mela also tells you, before it asks, that it will send one note a day, in the evening, about Mela Pro; if you agree, that note is on, and you can turn it off in Settings > Notifications > Pro offers. It never goes to subscribers. If you turn it on, also a reminder two days before a free trial ends. All notifications are scheduled on your device. You can disable them at any time in iOS Settings.
+- Camera: only when you photograph a document to attach it to an appointment entry. The photo stays on your device.
 - Photos: only if you choose to set a profile avatar. Mela uses the system photo picker, so the app is never granted access to your photo library - it receives only the single image you pick.
 
-The app does not request location, contacts, microphone, or camera. It requests read-only Apple Health access only if you turn on the optional Apple Health connection.
+The app does not request location, contacts, or microphone. It requests read-only Apple Health access only if you turn on the optional Apple Health connection.
 
 ### Your control
 
@@ -114,8 +117,10 @@ Mela это офлайн-приложение для iPhone. Оно не соб�
 
 Во внутреннем хранилище приложения на твоём iPhone:
 
-- Записи цикла (месячные, боль, симптомы, тесты, таблетки, секс, вес, заметки).
+- Записи цикла (менструация, боль, симптомы, тесты, таблетки, секс, вес, заметки).
 - Настройки приложения (предпочтения, время напоминаний, оформление) и ответы на вопросы при первом запуске.
+- Список напоминаний, которые приложение тебе показало (колокольчик на главном экране).
+- Документы и фото, которые ты прикрепишь к записи о визите к врачу, если пользуешься этой функцией.
 - Имя профиля и аватар, если ты задашь их по желанию.
 - Локальные резервные файлы, если ты используешь экспорт/импорт.
 
@@ -157,10 +162,11 @@ Mela это офлайн-приложение для iPhone. Оно не соб�
 
 ### Разрешения, которые приложение может запросить
 
-- Уведомления: чтобы напомнить о приближающихся месячных или окне овуляции, о ежедневном чек-ине, о таблетках и об изменении в цикле. Если ты их включишь, ещё напоминание за два дня до конца пробного периода и сообщение о Mela Pro. Все уведомления планируются на устройстве. Можно выключить в настройках iOS в любой момент.
+- Уведомления: чтобы напомнить о приближающейся менструации или окне овуляции, о ежедневном чек-ине, о таблетках и об изменении в цикле. Ещё Mela заранее говорит, что будет присылать одно сообщение в день, вечером, о Mela Pro. Если ты согласишься, это сообщение включится; выключить его можно в Настройках > Уведомления > Предложения Pro. Подписчикам оно не приходит. Если ты включишь напоминание о пробном периоде, оно придёт за два дня до его конца. Все уведомления планируются на устройстве. Можно выключить в настройках iOS в любой момент.
+- Камера: только когда ты фотографируешь документ, чтобы прикрепить его к записи о визите к врачу. Снимок остаётся на устройстве.
 - Фото: только если ты захочешь поставить аватар. Mela использует системный выбор фото, поэтому приложение не получает доступ к твоей фотобиблиотеке - ему передаётся только тот один снимок, который ты выберешь.
 
-Приложение не запрашивает геолокацию, контакты, микрофон или камеру. Доступ к Apple Health (только на чтение) запрашивается, лишь если ты включишь необязательное подключение к Apple Health.
+Приложение не запрашивает геолокацию, контакты или микрофон. Доступ к Apple Health (только на чтение) запрашивается, лишь если ты включишь необязательное подключение к Apple Health.
 
 ### Контроль данных
 
