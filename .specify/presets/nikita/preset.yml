@@ -3,7 +3,7 @@ schema_version: "1.0"
 preset:
   id: "nikita"
   name: "Nikita Workflow"
-  version: "1.0.0"
+  version: "1.1.0"
   description: "Lean specify + feature branch via git extension + status-block header per constitution"
   author: "nikita"
   license: "MIT"

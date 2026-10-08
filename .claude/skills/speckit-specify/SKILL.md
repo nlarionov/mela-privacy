@@ -38,17 +38,18 @@ $ARGUMENTS
    ```
 
 5. Write `specs/<NNN-short-name>/spec.md`:
-   - Header status block per constitution: `**Статус**: черновик`, `**Обновлено**: <today>`,
-     `**Следующий шаг**: <one line>`, plus the overwrite comment.
-   - Sections: Проблема; User Stories (P1-P3); Success Criteria (SC-001..., measurable,
-     technology-agnostic); Функциональные требования (FR-001..., each testable);
+   - Header status block per constitution: `**Status**: draft`, `**Updated**: <today>`,
+     `**Next step**: <one line>`, plus the overwrite comment.
+   - Sections: Problem; User Stories (P1-P3); Success Criteria (SC-001..., measurable,
+     technology-agnostic); Functional Requirements (FR-001..., each testable);
      Edge Cases; **Out of Scope** (mandatory); Assumptions.
-   - Prose in Russian, IDs and section keywords in English, no em-dash.
+   - Prose in English, no em-dash. Russian only for content the constitution allows
+     (UI copy, text for other people, verbatim quotes).
    - Make informed defaults for unspecified details; at most 3 `[NEEDS CLARIFICATION]` markers
      for genuinely unknowable decisions.
 
 6. If the initiative is long-running (more than one feature or more than ~2 weeks), also write
-   `specs/<NNN-short-name>/roadmap.md`: table `ID | что | статус | заметка`,
+   `specs/<NNN-short-name>/roadmap.md`: table `ID | What | Status | Note`,
    statuses planned / in-progress / waiting / done, IDs immutable.
 
 7. Report: branch (or "main, no branch"), spec path, and open `[NEEDS CLARIFICATION]` questions.

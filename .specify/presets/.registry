@@ -28,9 +28,9 @@
       "installed_at": "2026-09-01T09:46:44.375572+00:00"
     },
     "nikita": {
-      "version": "1.0.0",
+      "version": "1.1.0",
       "source": "local",
-      "manifest_hash": "sha256:f19313f960adbc1ca91734f883b5995eff1f27e58685105355e6e338c6df69c6",
+      "manifest_hash": "sha256:3e8d0b64e611c36b1fab3d22893efd4ca7caad19b20a7ff9f187961746dda88d",
       "enabled": true,
       "priority": 5,
       "registered_commands": {
@@ -43,7 +43,7 @@
           "speckit-specify"
         ]
       },
-      "installed_at": "2026-09-01T09:46:44.612755+00:00"
+      "installed_at": "2026-10-08T12:08:24.299876+00:00"
     }
   }
 }

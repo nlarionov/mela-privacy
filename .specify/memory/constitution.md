@@ -1,47 +1,49 @@
-# Конституция mela-privacy
+# mela-privacy Constitution
 
-Правила для каждой спеки, плана и списка задач в этом репозитории.
-Соло-проект: автор, ревьюер и стейкхолдер - один человек (Никита). Никакой командной церемонии.
+Rules for every spec, plan and task list in this repository.
+Solo project: author, reviewer and stakeholder are one person (Nikita). No team ceremony.
 
-## Стек (не повторять в планах)
+## Stack (do not repeat in plans)
 
-- Jekyll-страница privacy policy для Mela (iPhone cycle tracker), хостится на GitHub Pages.
-  Контент - `index.md`, рендер через `_config.yml`. Пуш в main публикует страницу напрямую.
-- Тестов нет, гейт зелёных тестов не применяется.
+- Jekyll privacy policy page for Mela (iPhone cycle tracker), hosted on GitHub Pages.
+  Content is `index.md`, rendered through `_config.yml`. A push to main publishes the page directly.
+- No tests - the green-test gate does not apply.
 
-## Как пишем артефакты
+## How we write artifacts
 
-- Проза по-русски. ID (FR-001, SC-001, US1/AC2, T001), заголовки секций и статусные маркеры `[ ]`/`[X]` - по-английски.
-- Имена типов, файлов и команд внутри русского текста - латиницей, как в коде.
-- Без эм-дэшей ни в одном артефакте. Без слоганов-заполнителей - только факты, шаги, числа.
-- Каждое требование проверяемо. Success Criteria - измеримы и без привязки к технологии.
-- У каждой спеки есть секция Out of Scope: что сознательно НЕ делаем.
+- Prose in English. IDs (FR-001, SC-001, US1/AC2, T001), section headings and status markers `[ ]`/`[X]` in English.
+  Russian stays only in content: UI copy and localizations, text for other people, verbatim quotes.
+- Type, file and command names are written as in code.
+- No em-dashes in any artifact. No filler slogans: only facts, steps, numbers.
+- Every requirement is testable. Success Criteria are measurable and technology-agnostic.
+- Every spec has an Out of Scope section: what we deliberately do NOT do.
 
-## Статус и прогресс (главное правило)
+## Status and progress (the main rule)
 
-- Шапка каждой спеки несёт перезаписываемый блок:
-  `Статус` (черновик | в работе | ждём | готово) / `Обновлено` (YYYY-MM-DD) / `Следующий шаг` (одна строка).
-  Блок перезаписывается целиком при каждом изменении состояния. Историю ниже него не дописывать.
-- Лимиты шапки (проверяет pre-commit хук spec-freshness, когда шапка меняется): `Статус` начинается с одного
-  из значений (или `закрыт`), не больше 12 слов; `Обновлено` = дата плюс не больше 12 слов; `Следующий шаг` =
-  одна строка, не больше 40 слов. Подробности - в заметки строк roadmap.
-- Для состояния "ждём" указывать, чего ждём и до какой даты; если срока объективно нет - писать явно "срок не назначен".
-- Долгая инициатива (больше одной фичи или дольше пары недель) ведёт `roadmap.md` в своей папке:
-  таблица подзадач `ID | что | статус (planned / in-progress / waiting / done) | заметка`. ID не переименовывать.
-- Прогресс выполнения живёт в `tasks.md` как `[X]`; допустим внешний артефакт вместо пути к файлу.
+- Every spec header carries a rewritable block:
+  `Status` (draft | in progress | waiting | done) / `Updated` (YYYY-MM-DD) / `Next step` (one line).
+  The block is rewritten as a whole on every state change. Do not append history below it.
+- Header limits (checked by the spec-freshness pre-commit hook whenever the header changes): `Status` starts with
+  one of the values (or `closed`) and has at most 12 words; `Updated` = the date plus at most 12 words;
+  `Next step` = one line, at most 40 words. Details go to the roadmap row notes.
+- For the `waiting` state, name what we are waiting for and until what date; if there is objectively no deadline,
+  write "no deadline set" explicitly.
+- A long initiative (more than one feature or longer than a couple of weeks) keeps a `roadmap.md` in its folder:
+  a subtask table `ID | What | Status (planned / in-progress / waiting / done) | Note`. Do not rename IDs.
+- Execution progress lives in `tasks.md` as `[X]`; an external artifact is allowed instead of a file path.
 
-## Границы применения команд
+## Command boundaries
 
-- `/speckit-implement` и `/speckit-converge` - только для кодовых фич. Некодовые инициативы
-  (маркетинг, доки, пресейл) ведутся spec + tasks + roadmap, без implement.
-- Тесты в задачах: для кода обязательны (баг = сначала красный тест), для некодовых не нужны.
+- `/speckit-implement` and `/speckit-converge` - code features only. Non-code initiatives
+  (marketing, docs, presale) run as spec + tasks + roadmap, without implement.
+- Tests in tasks: mandatory for code (bug = red test first), not needed for non-code work.
 
-## Ветки и мерж (решение Никиты 01.09.2026)
+## Branches and merge (Nikita's decision 01.09.2026)
 
-- Фича со спекой, трогающая код = своя ветка `NNN-slug` (создаёт `/speckit-specify` через
-  git-расширение). Мелочь (точечный фикс, твик, доки) идёт сразу в main.
-- Мерж в main только с зелёными тестами: пакет по масштабу правки (/qa, testmap, где есть),
-  для большой волны - full. Красное не мержится, чинится в ветке.
-- Ветку коммитить и пушить по ходу работы. Мерж фичи в main - после ручного добра Никиты,
-  если фича видима пользователю; технические ветки можно мержить самому после зелёного гейта.
-- Автокоммиты git-расширения выключены сознательно: коммитим сами, со своими сообщениями.
+- A spec'd feature that touches code = its own branch `NNN-slug` (created by `/speckit-specify` through the
+  git extension). Small stuff (point fix, tweak, docs) goes straight to main.
+- Merge to main only with green tests: a pack scaled to the change (/qa, testmap where present),
+  full for a big wave. Red does not merge; it is fixed in the branch.
+- Commit and push the branch as work progresses. A feature merges to main after Nikita's manual go-ahead
+  if it is user-visible; technical branches can be merged without him after a green gate.
+- The git extension's auto-commits are deliberately off: we commit ourselves, with our own messages.
