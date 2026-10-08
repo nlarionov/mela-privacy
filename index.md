@@ -8,9 +8,9 @@ layout: default
 [Devlog]({{ site.baseurl }}/devlog/) - how Mela was built, in public.
 
 Effective date: 2026-05-20.
-Last updated: 2026-09-25.
+Last updated: 2026-10-08.
 
-This page is the privacy policy for Mela, an iPhone app that helps you track your menstrual cycle. Both English and Russian versions are below.
+This page is the privacy policy for Mela, an iPhone app that helps you track your menstrual cycle and your pregnancy. Both English and Russian versions are below.
 
 ---
 
@@ -28,7 +28,8 @@ Nothing. The app does not have a server. There is no account, no login, no analy
 
 Inside the app's private storage on your iPhone:
 
-- Cycle entries you log (period, pain, symptoms, tests, pills, sex, weight, notes).
+- Cycle entries you log (period, pain, symptoms, tests, pills, sex, weight, water, notes).
+- Pregnancy data, if you use the pregnancy mode: the date of your last period, the due date and how it was set (including an ultrasound date), the appointments, bleeding and symptoms you log during the pregnancy, the weekly checklist you tick, and, when the pregnancy ends, its outcome and the baby's birth date.
 - Your app settings (preferences, reminder times, appearance choices) and the answers you give in the first-run setup.
 - The list of reminders the app has shown you (the bell on the Home screen).
 - Documents and photos you attach to an appointment entry, if you use that feature.
@@ -59,7 +60,11 @@ Mela offers an optional Apple Health connection (part of the paid upgrade, off b
 
 ### Home-screen widget
 
-Mela includes an optional home-screen widget. To draw it, the app saves a small snapshot of your cycle summary (such as your current phase and predicted dates) into a private storage area shared between the app and its own widget (an App Group on your device). This snapshot stays on your device, is not sent anywhere, and is removed when you delete your data. Because a widget can appear on the Lock Screen, this snapshot is readable after the first unlock following a restart.
+Mela includes optional home-screen widgets. To draw them, the app saves a small snapshot (such as your current phase and predicted dates, your pregnancy dates, intimacy counts, and today's water) into a private storage area shared between the app and its own widgets (an App Group on your device). This snapshot stays on your device, is not sent anywhere, and is removed when you delete your data.
+
+The water widget's plus and minus buttons add or remove one glass for today. The widget writes each tap into the same shared area on your device, and the app moves the taps into your log the next time you open it, then removes them from the shared area. The taps are not sent anywhere.
+
+Because a widget can appear on the Lock Screen, the snapshot and the water taps are readable after the first unlock following a restart.
 
 ### Articles and links
 
@@ -117,7 +122,8 @@ Mela это офлайн-приложение для iPhone. Оно не соб�
 
 Во внутреннем хранилище приложения на твоём iPhone:
 
-- Записи цикла (менструация, боль, симптомы, тесты, таблетки, секс, вес, заметки).
+- Записи цикла (менструация, боль, симптомы, тесты, таблетки, секс, вес, вода, заметки).
+- Данные беременности, если ты пользуешься режимом беременности: дата последней менструации, предполагаемая дата родов и то, как она задана (в том числе дата УЗИ), визиты к врачу, кровотечения и симптомы, которые ты отмечаешь во время беременности, отметки в чек-листе недели, а после окончания беременности её исход и дата рождения ребёнка.
 - Настройки приложения (предпочтения, время напоминаний, оформление) и ответы на вопросы при первом запуске.
 - Список напоминаний, которые приложение тебе показало (колокольчик на главном экране).
 - Документы и фото, которые ты прикрепишь к записи о визите к врачу, если пользуешься этой функцией.
@@ -148,7 +154,11 @@ Mela это офлайн-приложение для iPhone. Оно не соб�
 
 ### Виджет на домашнем экране
 
-В Mela есть необязательный виджет для домашнего экрана. Чтобы его отрисовать, приложение сохраняет небольшой снапшот сводки цикла (например, текущую фазу и прогнозные даты) в приватную область, общую для приложения и его собственного виджета (App Group на твоём устройстве). Этот снапшот остаётся на устройстве, никуда не отправляется и удаляется вместе с твоими данными. Поскольку виджет может появляться на экране блокировки, снапшот читаем после первого разблокирования после перезагрузки.
+В Mela есть необязательные виджеты для домашнего экрана. Чтобы их отрисовать, приложение сохраняет небольшой снапшот (например, текущую фазу и прогнозные даты, даты беременности, счётчики близости и воду за сегодня) в приватную область, общую для приложения и его собственных виджетов (App Group на твоём устройстве). Этот снапшот остаётся на устройстве, никуда не отправляется и удаляется вместе с твоими данными.
+
+Кнопки плюс и минус на виджете воды добавляют или убирают один стакан за сегодня. Виджет записывает каждое нажатие в ту же общую область на устройстве. Когда ты в следующий раз открываешь приложение, оно переносит нажатия в твой журнал и удаляет их из общей области. Нажатия никуда не отправляются.
+
+Поскольку виджет может появляться на экране блокировки, снапшот и нажатия виджета воды читаемы после первого разблокирования после перезагрузки.
 
 ### Статьи и ссылки
 
